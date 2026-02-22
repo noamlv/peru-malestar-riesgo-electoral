@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Perú 2026 | Historia Analítica del Escenario Político</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    (function () {
+      const stamp = Date.now().toString();
+      window.__storyVersion = stamp;
+      window.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('link[rel="stylesheet"][href], img[src], iframe[src]').forEach(function (el) {
+          const attr = el.tagName === "LINK" ? "href" : "src";
+          const val = el.getAttribute(attr);
+          if (!val) return;
+          if (/^https?:\/\//i.test(val)) return;
+          if (val.startsWith("data:")) return;
+          const sep = val.includes("?") ? "&" : "?";
+          el.setAttribute(attr, val + sep + "v=" + stamp);
+        });
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="noise"></div>
+    <nav class="topnav">
+      <a href="#lectura">Contexto político</a>
+      <a href="#definiciones">Definiciones</a>
+      <a href="#multivariado">Estructura</a>
+      <a href="#ml">Modelos</a>
+      <a href="#clusters">Segmentos</a>
+      <a href="#causal">Hipótesis</a>
+      <a href="#mapa">Territorio</a>
+    </nav>
+    <div class="hero-content">
+      <p class="kicker">BARÓMETRO PERÚ · ENERO 2026</p>
+      <h1>Perú: del malestar al riesgo electoral</h1>
+      <p class="lead intro-copy">Un análisis político basado en datos para entender el clima de opinión, identificar riesgos electorales y detectar oportunidades de campaña en el Perú.</p>
+      <p class="lead meta-line"><strong>Autor:</strong> Noam López Villanes<br><strong>Fuente:</strong> IMASEN, enero de 2026.</p>
+      <a class="btn" href="#lectura">Iniciar lectura</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="lectura" class="panel">
+      <h2>Nivel 1 · El contexto político</h2>
+      <p>Primero leemos el estado general de la opinión pública: evaluación del rumbo del país, aprobación institucional, percepción de crisis y expectativas de cambio. El panel inicia en <strong>Nacional</strong> y permite filtrar por macrozona para ver cómo cambian las cuatro visualizaciones al mismo tiempo.</p>
+      <figure class="frame-card fullframe level1-frame">
+        <iframe src="./visualizaciones_avanzadas/00_contexto_nivel1_interactivo.html" title="Panel interactivo del contexto por zona"></iframe>
+        <figcaption>Usa el panel interactivo del contexto político peruano seleccionando por zona.</figcaption>
+      </figure>
+      <div class="insight-strip">
+        <span>24.1% aprueba la gestión presidencial</span><span>70.4% desaprueba la gestión presidencial</span><span>44.3% percibe que el país vive una “peor crisis”</span><span>78.0% espera un nuevo rumbo tras las elecciones</span>
+      </div>
+    </section>
+
+    <section id="definiciones" class="panel alt">
+      <h2>Definiciones y métricas analíticas</h2>
+      <p>El análisis requiere definiciones y métricas que nos permitan analizar el contexto político electoral con mayor rigurosidad. Las dimensiones escogidas resumen fenómenos complejos en indicadores comparables para análisis y estrategia. Haz clic en “Ver valor observado” para mostrar los resultados.</p>
+      <div class="cards cards-top">
+        <article>
+          <h3>Índice de Malestar Político (IMP)</h3>
+          <p>Escala 0–100 que combina señales de insatisfacción política y percepción de deterioro del contexto nacional.</p>
+          <details><summary>Ver valor observado</summary><p><strong>51.9 / 100</strong> (promedio ponderado). Indica un nivel medio-alto de malestar.</p></details>
+        </article>
+        <article>
+          <h3>Índice de Conocimiento de Partidos (ICP)</h3>
+          <p>Escala 0–100 basada en reconocimiento de oferta partidaria; aproxima nivel de información política electoral.</p>
+          <details><summary>Ver valor observado</summary><p><strong>21.7 / 100</strong> (promedio ponderado). Refleja conocimiento partidario bajo: una parte importante del electorado todavía tiene poca familiaridad con la oferta de partidos.</p></details>
+        </article>
+        <article>
+          <h3>Cluster político</h3>
+          <p>Grupo de personas con patrones de opinión similares; permite diseñar mensajes distintos para públicos distintos.</p>
+          <details><summary>Ver valor observado</summary><p>Se identificaron <strong>3 grupos</strong>: <strong>crítico dominante</strong> (63.7%), <strong>pro-gobierno / continuidad</strong> (34.1%) y <strong>bisagra minoritaria</strong> (2.2%).</p></details>
+        </article>
+      </div>
+      <div class="cards cards-bottom two-up">
+        <article>
+          <h3>Riesgo electoral</h3>
+          <p>Lectura de vulnerabilidad política que combina desaprobación, crisis percibida e indecisión legislativa.</p>
+          <details>
+            <summary>Ver valor observado</summary>
+            <div class="traffic-box">
+              <div class="traffic-lights" aria-label="Semáforo del tracker">
+                <span class="light red on" title="Rojo"></span>
+                <span class="light amber on" title="Ámbar"></span>
+                <span class="light green on" title="Verde"></span>
+              </div>
+              <p><strong>Semáforo del tracker:</strong> 6 de 8 indicadores están en rojo. Usa los botones para ver cuáles son.</p>
+              <div class="semaforo-tabs" role="tablist" aria-label="Indicadores por color del semáforo">
+                <button type="button" class="semaforo-tab active" data-target="rojo">Rojo (6)</button>
+                <button type="button" class="semaforo-tab" data-target="ambar">Ámbar (0)</button>
+                <button type="button" class="semaforo-tab" data-target="verde">Verde (2)</button>
+              </div>
+              <div class="semaforo-panels">
+                <div class="semaforo-panel active" data-panel="rojo">
+                  <ul class="semaforo-list">
+                    <li><strong>Aprobación presidencial (24.1%)</strong>: baja aprobación del Ejecutivo.</li>
+                    <li><strong>Desaprobación presidencial (70.4%)</strong>: costo político alto del Ejecutivo.</li>
+                    <li><strong>Crisis severa percibida (44.3%)</strong>: malestar estructural elevado.</li>
+                    <li><strong>Rechazo a Fuerza Popular (43.0%)</strong>: polarización y techo electoral para FP.</li>
+                    <li><strong>Indecisión voto diputados (48.0%)</strong>: la oferta electoral no consolida preferencia.</li>
+                    <li><strong>Indecisión voto senadores (54.9%)</strong>: fragmentación y baja decisión en Senado.</li>
+                  </ul>
+                </div>
+                <div class="semaforo-panel" data-panel="ambar">
+                  <p class="small empty-state">En esta medición no hay indicadores clasificados en ámbar.</p>
+                </div>
+                <div class="semaforo-panel" data-panel="verde">
+                  <ul class="semaforo-list">
+                    <li><strong>Expectativa de nuevo rumbo (78.0%)</strong>: existe una ventana de cambio político.</li>
+                    <li><strong>Acuerdo con privatización de PetroPerú (58.4%)</strong>: mayoritaria apertura a reformas en este tema.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+        <article>
+          <h3>Estimación cuasi-causal</h3>
+          <p>Aproximación que estima efectos ajustando por diferencias observables entre personas.</p>
+          <details>
+            <summary>Ver valor observado</summary>
+            <div class="quasi-box">
+              <p><strong>Qué se compara:</strong> percepción de corrupción y opinión sobre la medida de motos, frente a aprobación presidencial e indecisión legislativa.</p>
+              <div class="effect-grid">
+                <div class="effect-item strong-neg">
+                  <span class="effect-label">Corrupción percibida → Aprobación presidencial</span>
+                  <span class="effect-value">Efecto negativo fuerte</span>
+                </div>
+                <div class="effect-item weak">
+                  <span class="effect-label">Corrupción percibida → Indecisión legislativa</span>
+                  <span class="effect-value">Sin efecto robusto</span>
+                </div>
+                <div class="effect-item weak">
+                  <span class="effect-label">Medida de motos → Aprobación presidencial</span>
+                  <span class="effect-value">Efecto pequeño / no concluyente</span>
+                </div>
+                <div class="effect-item weak">
+                  <span class="effect-label">Medida de motos → Indecisión legislativa</span>
+                  <span class="effect-value">Sin efecto robusto</span>
+                </div>
+              </div>
+              <p class="small">Lectura sugerida: la variable que realmente mueve la aprobación en este análisis es la percepción de corrupción, más que la medida evaluada de seguridad.</p>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section id="multivariado" class="panel">
+      <h2>Nivel 2 · Estructura multivariada</h2>
+      <div class="grid two level2-copy">
+        <div>
+          <p><strong>¿Qué es el espacio latente político?</strong> Es una visualización que resume varias variables políticas en un plano de 2 ejes para ver patrones generales de opinión. Si las nubes aparecen separadas, existen bloques de percepción diferentes; si se superponen, hay mayor ambigüedad política.</p>
+        </div>
+        <div>
+          <p><strong>¿Qué es una red de co-menciones?</strong> Es una visualización de relaciones entre problemas del país. Cada círculo es un problema del país y cada vínculo indica que esos problemas suelen mencionarse juntos. Los nodos más conectados marcan ejes centrales del debate público.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <figure class="frame-card pca-frame">
+          <iframe src="./visualizaciones_avanzadas/01_espacio_latente_pca_interactivo.html" title="Espacio latente político interactivo"></iframe>
+          <figcaption>Cada punto representa a una persona. El color muestra su aprobación presidencial y la posición resume su perfil político en múltiples variables. Los componentes 1 y 2 son ejes estadísticos (construidos con el Análisis de Componentes Principales - PCA), no preguntas directas.</figcaption>
+          <div class="mini-note">
+            <div class="component-card">
+              <h4>¿Qué son los componentes?</h4>
+              <p><strong>Componente 1:</strong> Es la combinación de variables que más diferencia a las personas en la base. Suele capturar el eje principal del clima político (por ejemplo, más aprobación vs. más malestar/desaprobación).</p>
+              <p><strong>Componente 2:</strong> Es una segunda combinación de variables, independiente de la primera. Captura otro patrón relevante (por ejemplo, incertidumbre, no respuesta o matices distintos al eje principal).</p>
+            </div>
+          </div>
+        </figure>
+        <figure class="frame-card network-frame">
+          <div class="frame-card-title">Red de co-menciones</div>
+          <iframe src="./visualizaciones_avanzadas/02_red_coproblemas_interactiva.html" title="Red interactiva de co-menciones"></iframe>
+          <figcaption>La red de co-ocurrencias está construida a partir de menciones en respuestas múltiples. El tamaño del nodo = peso de menciones; grosor del vínculo = fuerza de co-mención.</figcaption>
+          <div class="mini-note network-note">
+            <div class="component-card network-read-card">
+              <h4>¿Cómo leer la red?</h4>
+              <div class="network-read-grid">
+                <div>
+                  <p class="legend-title">Tamaño de los círculos (nodos)</p>
+                  <div class="network-legend">
+                    <span class="legend-item"><span class="dot dot-s"></span> menor mención</span>
+                    <span class="legend-item"><span class="dot dot-m"></span> mención media</span>
+                    <span class="legend-item"><span class="dot dot-l"></span> mayor mención</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="legend-title">Grosor del vínculo</p>
+                  <div class="network-legend">
+                    <span class="legend-item"><span class="edge edge-thin"></span> vínculo débil</span>
+                    <span class="legend-item"><span class="edge edge-strong"></span> vínculo fuerte</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="ml" class="panel alt">
+      <h2>Nivel 3 · Modelos explicativos con aprendizaje automático</h2>
+      <p>Se usaron dos modelos explicativos para entender qué factores influyen en la <strong>aprobación presidencial</strong>. La variable que se modela es la aprobación/desaprobación del presidente, usando como explicativas variables de clima político (crisis, rumbo del país), percepciones de gobernabilidad, actitudes frente al cambio y características de la muestra.</p>
+      <div class="cards two-up ml-cards">
+        <article>
+          <h3>Elastic Net</h3>
+          <p class="metric">AUC 0.965</p>
+          <p>Este modelo clasifica correctamente la gran mayoría de casos y es especialmente útil cuando varias variables políticas están relacionadas entre sí (por ejemplo, crisis, rumbo del país y malestar político).</p>
+        </article>
+        <article>
+          <h3>XGBoost</h3>
+          <p class="metric">AUC 0.963</p>
+          <p>Este modelo detecta relaciones más complejas entre variables. En este caso confirma el mismo patrón general: la aprobación presidencial está fuertemente vinculada al clima político y no al azar.</p>
+        </article>
+      </div>
+      <div class="ml-summary">
+        <p><strong>Lectura sugerida:</strong> Los modelos muestran que percepciones de crisis, gobernabilidad y malestar político explican una parte central de la aprobación presidencial.</p>
+      </div>
+      <figure class="mini-viz-card">
+        <div class="mini-viz-head">Relación con la aprobación presidencial (lectura resumida)</div>
+        <div class="rel-bars" aria-label="Resumen visual de variables que más explican la aprobación presidencial">
+          <div class="rel-row">
+            <span class="rel-label">Percepción de crisis</span>
+            <div class="rel-track"><span class="rel-fill strong"></span></div>
+            <span class="rel-tag">Alta relación</span>
+          </div>
+          <div class="rel-row">
+            <span class="rel-label">Gobernabilidad / orden político</span>
+            <div class="rel-track"><span class="rel-fill strong"></span></div>
+            <span class="rel-tag">Alta relación</span>
+          </div>
+          <div class="rel-row">
+            <span class="rel-label">Malestar político (IMP)</span>
+            <div class="rel-track"><span class="rel-fill medium"></span></div>
+            <span class="rel-tag">Relación relevante</span>
+          </div>
+          <div class="rel-row">
+            <span class="rel-label">Actitudes frente al cambio</span>
+            <div class="rel-track"><span class="rel-fill medium"></span></div>
+            <span class="rel-tag">Relación relevante</span>
+          </div>
+        </div>
+        <figcaption>Visualización-resumen (no causal): sintetiza los factores que ambos modelos identifican como más influyentes sobre la aprobación presidencial.</figcaption>
+      </figure>
+    </section>
+
+    <section id="clusters" class="panel">
+      <h2>Nivel 4 · Segmentación no supervisada</h2>
+      <p>Se encontraron <strong>3 grupos</strong> de ciudadanos con lógicas políticas distintas. En términos analíticos, esto muestra un escenario segmentado: un bloque crítico dominante con alta desaprobación y malestar, un bloque pro-gobierno / continuidad con mayor aprobación, y una bisagra minoritaria con posiciones más intermedias. Esto permite diseñar estrategia diferencial por segmento en lugar de una sola narrativa para toda la muestra.</p>
+      <figure class="frame-card fullframe heatmap-frame">
+        <iframe src="./visualizaciones_avanzadas/03_opinan_grupos_interactivo.html" title="Qué opinan los grupos de ciudadanos"></iframe>
+        <figcaption>Comparación interactiva de indicadores por grupo.</figcaption>
+      </figure>
+      <p>El paisaje de decisión electoral complementa esta lectura mostrando el peso relativo de la indecisión/no voto frente a los partidos en la elección de diputados. En este corte, la indecisión concentra una porción importante del espacio electoral y convive con una oferta partidaria fragmentada.</p>
+      <figure class="frame-card fullframe treemap-frame">
+        <iframe src="./visualizaciones_avanzadas/04_paisaje_decision_electoral_interactivo.html" title="Paisaje de decisión electoral"></iframe>
+        <figcaption>Paisaje de decisión electoral (diputados): burbujas más grandes representan mayor peso electoral.</figcaption>
+      </figure>
+      <div class="cluster-table-wrap">
+        <table>
+          <thead><tr><th>Grupo</th><th>Tamaño</th><th>Aprueba</th><th>Desaprueba</th><th>Crisis severa</th><th>Indecisión dip.</th></tr></thead>
+          <tbody>
+            <tr><td>Grupo 1 (pro-gobierno / continuidad)</td><td>34.1%</td><td>64.1%</td><td>25.7%</td><td>3.2%</td><td>46.1%</td></tr>
+            <tr><td>Grupo 2 (bisagra minoritaria)</td><td>2.2%</td><td>15.1%</td><td>44.6%</td><td>31.2%</td><td>38.9%</td></tr>
+            <tr><td>Grupo 3 (crítico dominante)</td><td>63.7%</td><td>3.0%</td><td>95.2%</td><td>67.2%</td><td>49.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="causal" class="panel alt">
+      <h2>Nivel 5 · Verificando hipótesis</h2>
+      <p>Se verificaron hipótesis con pruebas ponderadas y estimación cuasi-causal para reforzar la interpretación de resultados.</p>
+      <div class="cards causal">
+        <article>
+          <h3>Hipótesis 1</h3>
+          <p>La percepción de crisis severa incrementa la desaprobación presidencial (confirmada).</p>
+        </article>
+        <article>
+          <h3>Hipótesis 2</h3>
+          <p>Mayor conocimiento partidario (ICP) reduce indecisión electoral (confirmada).</p>
+        </article>
+        <article>
+          <h3>Hipótesis 3</h3>
+          <p>El apoyo a privatización de PetroPerú difiere por NSE (confirmada).</p>
+        </article>
+      </div>
+      <div class="highlight">
+        <p><strong>Hallazgo clave:</strong> percibir corrupción (P8X=Sí) se asocia con <strong>-25.2 puntos porcentuales</strong> de aprobación presidencial.</p>
+      </div>
+      <p class="small note">Nota metodológica (en simple): usamos <strong>svyglm/svychisq</strong> para comprobar si las diferencias y asociaciones observadas se sostienen estadísticamente en datos de encuesta con ponderación. Además, usamos <strong>IPW/AIPW</strong> como técnicas de estimación cuasi-causal para aproximarnos mejor al efecto de algunas variables (por ejemplo, percepción de corrupción) sobre resultados como la aprobación presidencial, ajustando por diferencias observables entre personas.</p>
+    </section>
+
+    <section id="mapa" class="panel">
+      <h2>Nivel 6 · Territorio y escenario integrado</h2>
+      <div class="grid two level6-copy">
+        <div>
+          <p><strong>¿Cómo leer el mapa interactivo?</strong> Color = nivel de desaprobación presidencial (más oscuro, más desaprobación). Tamaño del círculo = nivel de indecisión legislativa (círculos más grandes, mayor indecisión).</p>
+        </div>
+        <div>
+          <p><strong>¿Qué es un cubo político?</strong> Esta visualización combina malestar (IMP), conocimiento partidario (ICP) y riesgo político para explorar perfiles de mayor vulnerabilidad.</p>
+        </div>
+      </div>
+      <div class="grid two bigframes">
+        <figure class="frame-card map-frame">
+          <iframe src="./visualizaciones_avanzadas/05_mapa_riesgo_macrozonas_interactivo.html" title="Mapa interactivo del Perú"></iframe>
+          <figcaption>Las macrozonas con círculos más grandes y tonos más oscuros concentran una combinación más exigente para la estrategia política, porque reúnen desaprobación alta e indecisión legislativa elevada.</figcaption>
+        </figure>
+        <figure class="frame-card cube-frame">
+          <iframe src="./visualizaciones_avanzadas/06_cubo_politico_3d_interactivo.html" title="Cubo político 3D"></iframe>
+          <figcaption>Se observan perfiles distribuidos por macrozona, con combinaciones de alto malestar (IMP) y mayor riesgo político. Esto ayuda a identificar dónde la vulnerabilidad política convive con bajo conocimiento partidario (ICP) o con mayor incertidumbre.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="panel conclusion">
+      <h2>Resultados principales</h2>
+      <ol>
+        <li>El escenario político está dominado por malestar y desaprobación, con un bloque crítico mayoritario.</li>
+        <li>Existe demanda de cambio, pero con alta indecisión y fragmentación electoral.</li>
+        <li>La corrupción percibida es el factor más sensible para la legitimidad presidencial.</li>
+        <li>La estrategia de campaña más competitiva combina credibilidad anticorrupción, seguridad verificable y mensajes simples por segmento.</li>
+      </ol>
+      <p><strong>Análisis elaborado por Noam López Villanes</strong> con información recabada por <strong>IMASEN</strong> en enero de 2026.</p>
+      <a class="btn" href="#top">Volver arriba</a>
+    </section>
+
+    <section class="panel alt ficha-tecnica">
+      <h2>Ficha técnica</h2>
+      <div class="tech-grid">
+        <div class="tech-label">Universo</div>
+        <div class="tech-content">Personas de 18 años a más, residentes en el territorio nacional. La investigación se realizó a nivel urbano y rural.</div>
+
+        <div class="tech-label">Método de muestreo</div>
+        <div class="tech-content">
+          <p><strong>Zonas urbanas:</strong> se aplicó una metodología online mediante invitaciones personalizadas en redes sociales y sitios Google, verificando cuotas de sexo y edad por departamento, provincia y distrito.</p>
+          <p><strong>Zonas rurales:</strong> se aplicaron entrevistas personales en hogares seleccionados, distribuidas según peso poblacional por circunscripción. La selección de viviendas siguió un muestreo probabilístico polietápico y la selección de personas dentro de la vivienda se realizó con método de cuotas.</p>
+        </div>
+      </div>
+      <details class="tech-details">
+        <summary>Ver más (tamaño y características de la muestra)</summary>
+        <div class="component-card tech-subcard">
+          <p><strong>Total de entrevistas efectivas:</strong> 1,300</p>
+          <div class="tech-table-wrap">
+            <table class="tech-table">
+              <thead>
+                <tr>
+                  <th>Dimensión</th>
+                  <th>Categoría</th>
+                  <th>Encuestas ponderadas</th>
+                  <th>%</th>
+                  <th>Encuestas realizadas</th>
+                  <th>%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td rowspan="2">Sexo</td><td>Masculino</td><td>624</td><td>48.0</td><td>648</td><td>49.8</td></tr>
+                <tr><td>Femenino</td><td>676</td><td>52.0</td><td>652</td><td>50.2</td></tr>
+                <tr><td rowspan="4">Edad</td><td>18 a 24 años</td><td>225</td><td>17.3</td><td>257</td><td>19.8</td></tr>
+                <tr><td>25 a 34 años</td><td>270</td><td>20.8</td><td>309</td><td>23.8</td></tr>
+                <tr><td>35 a 44 años</td><td>268</td><td>20.6</td><td>278</td><td>21.4</td></tr>
+                <tr><td>45 a más años</td><td>537</td><td>41.3</td><td>456</td><td>35.1</td></tr>
+                <tr><td rowspan="5">Zona</td><td>Lima/Callao</td><td>453</td><td>34.8</td><td>500</td><td>38.5</td></tr>
+                <tr><td>Norte</td><td>343</td><td>26.4</td><td>300</td><td>23.1</td></tr>
+                <tr><td>Sur</td><td>307</td><td>23.6</td><td>250</td><td>19.2</td></tr>
+                <tr><td>Centro</td><td>106</td><td>8.2</td><td>150</td><td>11.5</td></tr>
+                <tr><td>Oriente</td><td>91</td><td>7.0</td><td>100</td><td>7.7</td></tr>
+                <tr><td rowspan="2">Área</td><td>Urbano</td><td>956</td><td>73.5</td><td>1000</td><td>76.9</td></tr>
+                <tr><td>Rural</td><td>344</td><td>26.5</td><td>300</td><td>23.1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel alt contacts">
+      <h2>Contacto</h2>
+      <div class="contact-blocks">
+        <div class="contact-card">
+          <h3>Más sobre mí:</h3>
+          <div class="social-links icon-only">
+            <a href="https://x.com/noamlv" target="_blank" rel="noopener" title="X / @noamlv"><img src="https://x.com/favicon.ico" alt="X" /></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn personal"><img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>Más sobre IMASEN</h3>
+          <div class="social-links icon-only">
+            <a href="https://www.linkedin.com/company/imasenlatam/" target="_blank" rel="noopener" title="IMASEN LATAM en LinkedIn"><img src="https://www.linkedin.com/favicon.ico" alt="IMASEN LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+      <p class="small version-note">Versión de carga: <span id="versionStamp">—</span></p>
+    </section>
+  </main>
+  <script>
+    (function () {
+      var el = document.getElementById("versionStamp");
+      if (el && window.__storyVersion) el.textContent = window.__storyVersion;
+    })();
+
+    (function () {
+      document.addEventListener("click", function (ev) {
+        var btn = ev.target.closest(".semaforo-tab");
+        if (!btn) return;
+        var wrap = btn.closest(".traffic-box");
+        if (!wrap) return;
+        var target = btn.getAttribute("data-target");
+        wrap.querySelectorAll(".semaforo-tab").forEach(function (b) {
+          b.classList.toggle("active", b === btn);
+        });
+        wrap.querySelectorAll(".semaforo-panel").forEach(function (panel) {
+          panel.classList.toggle("active", panel.getAttribute("data-panel") === target);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
