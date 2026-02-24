@@ -672,6 +672,91 @@ a {
   overflow: hidden;
   margin-top: 12px;
 }
+.subsection-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.ficha-tecnica .subsection-title + p {
+  margin-top: 0;
+}
+.metodos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.method-card {
+  margin-top: 0;
+  padding: 14px;
+}
+.method-card h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.method-block + .method-block {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.method-details {
+  margin-top: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.method-details summary {
+  cursor: pointer;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+}
+.method-details summary::-webkit-details-marker {
+  display: none;
+}
+.method-details summary::before {
+  content: "▸ ";
+  color: var(--accent-dark);
+}
+.method-details[open] summary::before {
+  content: "▾ ";
+}
+.method-details > .method-block {
+  margin-top: 8px;
+}
+.method-details > .method-block + .method-block {
+  border-top: none;
+  padding-top: 0;
+}
+.method-card ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+  color: var(--text);
+}
+.method-card li {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.method-card code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+.method-card em {
+  font-style: normal;
+  color: #374151;
+}
+.cluster-table-wrap .small.note {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
 .ficha-tecnica .tech-label {
   background: #f9fafb;
   color: var(--text);
@@ -751,6 +836,9 @@ a {
   .ficha-tecnica .tech-grid {
     grid-template-columns: 260px 1fr;
   }
+  .metodos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
   .ficha-tecnica .tech-label {
     display: flex;
     align-items: center;
@@ -771,6 +859,9 @@ a {
   .pca-frame iframe,
   .network-frame iframe {
     min-height: 420px;
+  }
+  .metodos-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

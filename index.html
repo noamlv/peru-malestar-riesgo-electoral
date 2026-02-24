@@ -40,6 +40,7 @@
       <a href="#clusters">Segmentos</a>
       <a href="#causal">Hipótesis</a>
       <a href="#mapa">Territorio</a>
+      <a href="#materiales-metodos">Materiales y métodos</a>
     </nav>
     <div class="hero-content">
       <p class="kicker">BARÓMETRO PERÚ · ENERO 2026</p>
@@ -95,19 +96,17 @@
                 <span class="light amber on" title="Ámbar"></span>
                 <span class="light green on" title="Verde"></span>
               </div>
-              <p><strong>Semáforo del tracker:</strong> 6 de 8 indicadores están en rojo. Usa los botones para ver cuáles son.</p>
+              <p><strong>Semáforo del tracker:</strong> 4 de 6 indicadores están en rojo. Usa los botones para ver cuáles son.</p>
               <div class="semaforo-tabs" role="tablist" aria-label="Indicadores por color del semáforo">
-                <button type="button" class="semaforo-tab active" data-target="rojo">Rojo (6)</button>
+                <button type="button" class="semaforo-tab active" data-target="rojo">Rojo (4)</button>
                 <button type="button" class="semaforo-tab" data-target="ambar">Ámbar (0)</button>
                 <button type="button" class="semaforo-tab" data-target="verde">Verde (2)</button>
               </div>
               <div class="semaforo-panels">
                 <div class="semaforo-panel active" data-panel="rojo">
                   <ul class="semaforo-list">
-                    <li><strong>Aprobación presidencial (24.1%)</strong>: baja aprobación del Ejecutivo.</li>
                     <li><strong>Desaprobación presidencial (70.4%)</strong>: costo político alto del Ejecutivo.</li>
                     <li><strong>Crisis severa percibida (44.3%)</strong>: malestar estructural elevado.</li>
-                    <li><strong>Rechazo a Fuerza Popular (43.0%)</strong>: polarización y techo electoral para FP.</li>
                     <li><strong>Indecisión voto diputados (48.0%)</strong>: la oferta electoral no consolida preferencia.</li>
                     <li><strong>Indecisión voto senadores (54.9%)</strong>: fragmentación y baja decisión en Senado.</li>
                   </ul>
@@ -170,12 +169,12 @@
       <div class="grid two">
         <figure class="frame-card pca-frame">
           <iframe src="./visualizaciones_avanzadas/01_espacio_latente_pca_interactivo.html" title="Espacio latente político interactivo"></iframe>
-          <figcaption>Cada punto representa a una persona. El color muestra su aprobación presidencial y la posición resume su perfil político en múltiples variables. Los componentes 1 y 2 son ejes estadísticos (construidos con el Análisis de Componentes Principales - PCA), no preguntas directas.</figcaption>
+          <figcaption>Cada punto representa a una persona. El color muestra su aprobación presidencial y la posición resume su perfil político en múltiples variables. Los ejes 1 y 2 son ejes estadísticos (construidos con el Análisis de Componentes Principales - PCA), no preguntas directas.</figcaption>
           <div class="mini-note">
             <div class="component-card">
-              <h4>¿Qué son los componentes?</h4>
-              <p><strong>Componente 1:</strong> Es la combinación de variables que más diferencia a las personas en la base. Suele capturar el eje principal del clima político (por ejemplo, más aprobación vs. más malestar/desaprobación).</p>
-              <p><strong>Componente 2:</strong> Es una segunda combinación de variables, independiente de la primera. Captura otro patrón relevante (por ejemplo, incertidumbre, no respuesta o matices distintos al eje principal).</p>
+              <h4>¿Qué son los ejes?</h4>
+              <p><strong>Eje 1 (14.6%):</strong> Resume la mayor parte de la información del plano. Las variables más relacionadas con este Eje son <em>IMP (malestar político)</em>, <em>rumbo del país (P1_1)</em>, <em>aprobación presidencial (P2_1)</em>, <em>P8</em> y <em>crisis percibida (P11)</em>.</p>
+              <p><strong>Eje 2 (6.7%):</strong> Añade una segunda dimensión independiente. Las variables más relacionadas con este Eje son <em>NSE</em>, <em>área</em>, y luego <em>rumbo del país (P1_1)</em>, <em>aprobación presidencial (P2_1)</em> y <em>crisis percibida (P11)</em>.</p>
             </div>
           </div>
         </figure>
@@ -251,7 +250,7 @@
             <span class="rel-tag">Relación relevante</span>
           </div>
         </div>
-        <figcaption>Visualización-resumen (no causal): sintetiza los factores que ambos modelos identifican como más influyentes sobre la aprobación presidencial.</figcaption>
+        <figcaption>La visualización sintetiza los factores que ambos modelos identifican como más influyentes sobre la aprobación presidencial.</figcaption>
       </figure>
     </section>
 
@@ -269,13 +268,14 @@
       </figure>
       <div class="cluster-table-wrap">
         <table>
-          <thead><tr><th>Grupo</th><th>Tamaño</th><th>Aprueba</th><th>Desaprueba</th><th>Crisis severa</th><th>Indecisión dip.</th></tr></thead>
+          <thead><tr><th>Grupo</th><th>Tamaño</th><th>Aprueba</th><th>Desaprueba</th><th>Crisis severa</th><th>Indecisión electoral</th></tr></thead>
           <tbody>
-            <tr><td>Grupo 1 (pro-gobierno / continuidad)</td><td>34.1%</td><td>64.1%</td><td>25.7%</td><td>3.2%</td><td>46.1%</td></tr>
-            <tr><td>Grupo 2 (bisagra minoritaria)</td><td>2.2%</td><td>15.1%</td><td>44.6%</td><td>31.2%</td><td>38.9%</td></tr>
-            <tr><td>Grupo 3 (crítico dominante)</td><td>63.7%</td><td>3.0%</td><td>95.2%</td><td>67.2%</td><td>49.0%</td></tr>
+            <tr><td>Grupo 1 (pro-gobierno / continuidad)</td><td>34.1%</td><td>64.1%</td><td>25.7%</td><td>3.2%</td><td>50.5%</td></tr>
+            <tr><td>Grupo 2 (bisagra minoritaria)</td><td>2.2%</td><td>15.1%</td><td>44.6%</td><td>31.2%</td><td>40.3%</td></tr>
+            <tr><td>Grupo 3 (crítico dominante)</td><td>63.7%</td><td>3.0%</td><td>95.2%</td><td>67.2%</td><td>52.0%</td></tr>
           </tbody>
         </table>
+        <p class="small note">Indecisión electoral: promedio simple entre la indecisión en la elección de diputados y la indecisión en la elección de senadores.</p>
       </div>
     </section>
 
@@ -297,9 +297,8 @@
         </article>
       </div>
       <div class="highlight">
-        <p><strong>Hallazgo clave:</strong> percibir corrupción (P8X=Sí) se asocia con <strong>-25.2 puntos porcentuales</strong> de aprobación presidencial.</p>
+        <p><strong>Hallazgo clave:</strong> percibir corrupción se asocia con <strong>25.2 puntos porcentuales menos</strong> de aprobación presidencial.</p>
       </div>
-      <p class="small note">Nota metodológica (en simple): usamos <strong>svyglm/svychisq</strong> para comprobar si las diferencias y asociaciones observadas se sostienen estadísticamente en datos de encuesta con ponderación. Además, usamos <strong>IPW/AIPW</strong> como técnicas de estimación cuasi-causal para aproximarnos mejor al efecto de algunas variables (por ejemplo, percepción de corrupción) sobre resultados como la aprobación presidencial, ajustando por diferencias observables entre personas.</p>
     </section>
 
     <section id="mapa" class="panel">
@@ -332,12 +331,13 @@
         <li>La corrupción percibida es el factor más sensible para la legitimidad presidencial.</li>
         <li>La estrategia de campaña más competitiva combina credibilidad anticorrupción, seguridad verificable y mensajes simples por segmento.</li>
       </ol>
-      <p><strong>Análisis elaborado por Noam López Villanes</strong> con información recabada por <strong>IMASEN</strong> en enero de 2026.</p>
       <a class="btn" href="#top">Volver arriba</a>
     </section>
 
-    <section class="panel alt ficha-tecnica">
-      <h2>Ficha técnica</h2>
+    <section id="materiales-metodos" class="panel alt ficha-tecnica materiales-metodos">
+      <h2>Materiales y métodos</h2>
+      <h3 class="subsection-title">Encuesta</h3>
+      <p>Se hizo uso de la base de datos del estudio de opinión pública en zonas urbanas y rurales en Perú realizada por IMASEN entre el 27 y el 31 de enero de 2026.</p>
       <div class="tech-grid">
         <div class="tech-label">Universo</div>
         <div class="tech-content">Personas de 18 años a más, residentes en el territorio nacional. La investigación se realizó a nivel urbano y rural.</div>
@@ -383,13 +383,181 @@
           </div>
         </div>
       </details>
+      <h3 class="subsection-title">Métodos</h3>
+      <p>Este apartado documenta las variables y herramientas empleadas para producir los indicadores, contrastes, modelos y visualizaciones en cada nivel de análisis.</p>
+      <div class="metodos-grid">
+        <article class="component-card method-card">
+          <h4>Nivel 1 · Contexto político</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li><code>P1_1</code> (Rumbo del país): categorías visualizadas como <em>Camino correcto</em>, <em>Camino incorrecto</em>, <em>No responde</em>.</li>
+              <li><code>P2_1</code> (Aprobación presidencial): <em>Aprueba</em>, <em>Desaprueba</em>, <em>No responde</em>.</li>
+              <li><code>P11</code> (Gravedad de la crisis): categorías resumidas como <em>Peor crisis</em>, <em>Crisis habitual</em>, <em>Problemas, no crisis</em>, <em>No responde</em>.</li>
+              <li><code>P54</code> (Expectativa de nuevo rumbo): <em>Habrá nuevo rumbo</em>, <em>Seguirá igual</em> (más no respuesta si aplica).</li>
+              <li><code>ZONA1</code> para filtro por macrozona: Nacional, Lima/Callao, Norte, Sur, Centro, Oriente.</li>
+              <li><code>factor1</code> como ponderador para porcentajes mostrados.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li>Agregación ponderada por categoría y macrozona a partir de tablas exportadas.</li>
+              <li>Visualización interactiva con Plotly (gráficos de barras horizontales conectados por selector de zona).</li>
+              <li>HTML/CSS/JavaScript para integración del panel en el sitio.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Definiciones y métricas analíticas</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li><code>IMP</code> (Índice de Malestar Político): indicador compuesto 0–100 construido con recodificaciones de <code>P1_1</code> (rumbo del país), <code>P11</code> (crisis percibida), <code>P6</code>, <code>P7</code> y <code>P8</code> en el análisis multivariado.</li>
+              <li><code>ICP</code> (Índice de Conocimiento político): índice 0–100 basado en el bloque <code>P48_1</code>–<code>P48_37</code> (reconocimiento de partidos).</li>
+              <li>Riesgo electoral: lectura del tracker que combina desaprobación presidencial, crisis severa percibida, expectativa de nuevo rumbo, acuerdo con privatización de PetroPerú e indecisión en voto de diputados y senadores.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li>R (procesamiento y estandarización de variables).</li>
+              <li>Recodificación de variables con etiquetas desde SPSS (<code>haven</code>).</li>
+              <li>Cálculo de indicadores compuestos y promedios ponderados con <code>factor1</code>.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Nivel 2 · Estructura multivariada</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li>PCA (espacio latente): <code>P1_1</code>, <code>P2_1</code>, <code>P11</code>, <code>P8</code>, <code>P54</code>, <code>P56</code>, además de variables de perfil (<code>SEXO1</code>, <code>EDAD1</code>, <code>ZONA1</code>, <code>NSE1</code>, <code>AREA1</code>) e indicadores <code>IMP</code>/<code>ICP</code>.</li>
+              <li>Color del PCA: <code>P2_1</code> (aprobación presidencial: aprueba / desaprueba / no responde).</li>
+              <li>Red de co-menciones: bloque de respuestas múltiples <code>P12_1</code>–<code>P12_27</code> (problemas del país), con nodos por problema y vínculos por co-ocurrencia.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li>Análisis de Componentes Principales (PCA) sobre matriz de diseño (<code>model.matrix</code> + <code>prcomp</code> en R).</li>
+              <li>Gráfico PCA con <code>ggplot2</code> + versión interactiva con <code>plotly</code>.</li>
+              <li>Red de co-ocurrencias con <code>igraph</code> (co-menciones ponderadas) y visualización interactiva HTML.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Nivel 3 · Modelos explicativos con aprendizaje automático</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li>Variable dependiente: <code>P2_1</code> (aprobación presidencial), modelada como binaria <em>Aprueba</em> vs <em>Desaprueba</em>.</li>
+              <li>Variables explicativas: clima político y gobernabilidad (<code>P1_1</code>, <code>P2_3</code>, <code>P4_1</code>–<code>P4_5</code>, <code>P6</code>, <code>P7</code>, <code>P8</code>, <code>P9</code>, <code>P10</code>, <code>P11</code>, <code>P52</code>–<code>P56</code>), perfil sociodemográfico (<code>SEXO1</code>, <code>EDAD1</code>, <code>ZONA1</code>, <code>NSE1</code>, <code>AREA1</code>) e indicadores <code>IMP</code>/<code>ICP</code>.</li>
+              <li>Ponderador: <code>factor1</code>.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li><code>glmnet</code> (Elastic Net logístico) para modelar aprobación con regularización.</li>
+              <li><code>xgboost</code> (árboles potenciados) para relaciones no lineales y comparativas de desempeño.</li>
+              <li><code>pROC</code> para métricas AUC; evaluación en muestra de prueba con partición train/test.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Nivel 4 · Segmentación no supervisada</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li>Matriz de segmentación (k-means): <code>P1_1</code>, <code>P2_1</code>, <code>P11</code>, <code>P8</code>, <code>P54</code>, <code>P56</code>, indecisión en diputados (<code>P49X</code> recodificada), más <code>IMP</code> e <code>ICP</code>.</li>
+              <li>Tabla resumen por grupo: tamaño ponderado, aprueba, desaprueba, crisis severa e indecisión electoral (promedio simple de indecisión en diputados y senadores).</li>
+              <li>Paisaje de decisión electoral: <code>P49X</code> (intención/decisión de voto para diputados), distinguiendo partidos vs indecisión/no voto.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li><code>kmeans</code> sobre matriz estandarizada; selección de k en análisis principal con criterio de silhouette.</li>
+              <li>Heatmap interactivo (Plotly) para comparar indicadores entre clústeres.</li>
+              <li>Gráfico interactivo de paisaje electoral (burbujas) para peso relativo de partidos e indecisión.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Nivel 5 · Verificación de hipótesis</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li>H1: desaprobación presidencial (derivada de <code>P2_1</code>) y crisis severa (derivada de <code>P11</code>), controlando por sexo, edad, NSE, zona y área.</li>
+              <li>H2: indecisión en diputados (derivada de <code>P49X</code>) y conocimiento partidario <code>ICP</code>, con controles sociodemográficos y territoriales.</li>
+              <li>H3: acuerdo con privatización de PetroPerú (derivada de <code>P56</code>) por <code>NSE1</code>.</li>
+              <li>Estimación cuasi-causal: percepción de corrupción (<code>P8X</code>) y opinión sobre medida de motos (<code>P53</code>) sobre aprobación presidencial e indecisión.</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li><code>survey</code> en R: <code>svyglm</code> y <code>svychisq</code> para inferencia con datos ponderados.</li>
+              <li>Métodos IPW/AIPW para estimación cuasi-causal con ajuste por confusores observables.</li>
+              <li>Reporte de resultados en tablas y narrativa de confirmación de hipótesis.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+
+        <article class="component-card method-card">
+          <h4>Nivel 6 · Territorio y escenario integrado</h4>
+          <details class="method-details">
+            <summary>Ver más</summary>
+            <div class="method-block">
+              <p><strong>Variables</strong></p>
+            <ul>
+              <li>Mapa por macrozona (<code>ZONA1</code>): desaprobación presidencial (derivada de <code>P2_1</code>) e indecisión legislativa (a partir de <code>P49X</code>) agregadas con ponderación.</li>
+              <li>Cubo político: <code>IMP</code>, <code>ICP</code> y un índice de riesgo político construido con <code>aprueba</code> (derivada de <code>P2_1</code>), <code>crisis_severa</code> (de <code>P11</code>) e indecisión en diputados (<code>P49X</code> recodificada), combinadas en el script con ponderaciones 0.55, 0.25 y 0.20, respectivamente.</li>
+              <li>Color en el cubo por macrozona (<code>ZONA1</code>).</li>
+            </ul>
+                      </div>
+            <div class="method-block">
+              <p><strong>Herramientas</strong></p>
+            <ul>
+              <li><code>leaflet</code> para mapa interactivo centrado en Perú.</li>
+              <li><code>plotly</code> para dispersión 3D del cubo político.</li>
+              <li>Agregaciones ponderadas y recodificaciones previas en R.</li>
+            </ul>
+            </div>
+          </details>
+        </article>
+      </div>
     </section>
 
     <section class="panel alt contacts">
       <h2>Contacto</h2>
       <div class="contact-blocks">
         <div class="contact-card">
-          <h3>Más sobre mí:</h3>
+          <h3>Más sobre mí</h3>
           <div class="social-links icon-only">
             <a href="https://x.com/noamlv" target="_blank" rel="noopener" title="X / @noamlv"><img src="https://x.com/favicon.ico" alt="X" /></a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn personal"><img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
@@ -426,6 +594,7 @@
         });
       });
     })();
+
   </script>
 </body>
 </html>
