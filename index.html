@@ -7,16 +7,13 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>Perú 2026 | Historia Analítica del Escenario Político</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
   <script>
     (function () {
       const stamp = Date.now().toString();
       window.__storyVersion = stamp;
       window.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('link[rel="stylesheet"][href], img[src], iframe[src]').forEach(function (el) {
+        document.querySelectorAll('link[rel="stylesheet"][href], img[src]').forEach(function (el) {
           const attr = el.tagName === "LINK" ? "href" : "src";
           const val = el.getAttribute(attr);
           if (!val) return;
@@ -74,7 +71,7 @@
           <details><summary>Ver valor observado</summary><p><strong>51.9 / 100</strong> (promedio ponderado). Indica un nivel medio-alto de malestar.</p></details>
         </article>
         <article>
-          <h3>Índice de Conocimiento de Partidos (ICP)</h3>
+          <h3>Índice de Conocimiento político (ICP)</h3>
           <p>Escala 0–100 basada en reconocimiento de oferta partidaria; aproxima nivel de información política electoral.</p>
           <details><summary>Ver valor observado</summary><p><strong>21.7 / 100</strong> (promedio ponderado). Refleja conocimiento partidario bajo: una parte importante del electorado todavía tiene poca familiaridad con la oferta de partidos.</p></details>
         </article>
@@ -557,28 +554,21 @@
       <h2>Contacto</h2>
       <div class="contact-blocks">
         <div class="contact-card">
-          <h3>Más sobre mí</h3>
           <div class="social-links icon-only">
-            <a href="https://x.com/noamlv" target="_blank" rel="noopener" title="X / @noamlv"><img src="https://x.com/favicon.ico" alt="X" /></a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn personal"><img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <h3>Más sobre IMASEN</h3>
-          <div class="social-links icon-only">
-            <a href="https://www.linkedin.com/company/imasenlatam/" target="_blank" rel="noopener" title="IMASEN LATAM en LinkedIn"><img src="https://www.linkedin.com/favicon.ico" alt="IMASEN LinkedIn" /></a>
+            <a href="https://x.com/noamlv" target="_blank" rel="noopener" title="X / @noamlv"><img src="https://cdn.simpleicons.org/x/111111" alt="X" /></a>
+            <a href="https://www.linkedin.com/in/noamlv/" target="_blank" rel="noopener" title="LinkedIn / noamlv"><img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
+            <a href="https://www.youtube.com/@lvnoam" target="_blank" rel="noopener" title="YouTube / @lvnoam"><img src="https://cdn.simpleicons.org/youtube/FF0000" alt="YouTube" /></a>
+            <a href="https://www.instagram.com/noamlv/" target="_blank" rel="noopener" title="Instagram / @noamlv"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" /></a>
+            <a href="https://www.facebook.com/noamlv/" target="_blank" rel="noopener" title="Facebook / noamlv"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook" /></a>
+            <a href="https://scholar.google.com/citations?user=Jq-kcicAAAAJ&hl=es" target="_blank" rel="noopener" title="Google Scholar"><img src="https://cdn.simpleicons.org/googlescholar/4285F4" alt="Google Scholar" /></a>
+            <a href="https://github.com/noamlv" target="_blank" rel="noopener" title="GitHub / noamlv"><img src="https://cdn.simpleicons.org/github/111111" alt="GitHub" /></a>
+            <a href="https://wa.me/51996358492" target="_blank" rel="noopener" title="WhatsApp"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" /></a>
           </div>
         </div>
       </div>
-      <p class="small version-note">Versión de carga: <span id="versionStamp">—</span></p>
     </section>
   </main>
   <script>
-    (function () {
-      var el = document.getElementById("versionStamp");
-      if (el && window.__storyVersion) el.textContent = window.__storyVersion;
-    })();
-
     (function () {
       document.addEventListener("click", function (ev) {
         var btn = ev.target.closest(".semaforo-tab");

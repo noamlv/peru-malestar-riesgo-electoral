@@ -2,19 +2,20 @@
   --bg: #ffffff;
   --text: #111111;
   --muted: #6b7280;
-  --accent: #10a37f;
-  --accent-dark: #0b7f62;
+  --accent: #111111;
+  --accent-dark: #000000;
   --line: #e5e7eb;
   --panel: #ffffff;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   --radius: 10px;
+  --font-sans: "Söhne", "Soehne", "ui-sans-serif", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans);
   font-size: 18px;
   line-height: 1.7;
   color: var(--text);
@@ -74,7 +75,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: var(--font-sans);
   letter-spacing: -0.02em;
   color: var(--text);
   margin: 0;
@@ -114,17 +115,17 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-top: 24px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  border: 1px solid #0f8f6f;
+  padding: 11px 18px;
+  border-radius: 999px;
+  border: 1px solid #111111;
   background: var(--accent);
   color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
   transition: all 0.2s ease;
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 .btn:hover {
   background: var(--accent-dark);
@@ -623,6 +624,30 @@ a {
   color: var(--accent-dark);
 }
 
+/* Sin bordes ni sombra en cards/subcards */
+.cards article,
+.component-card,
+.contact-card,
+.mini-viz-card,
+.frame-card,
+.traffic-box,
+.quasi-box,
+.effect-item,
+.tech-subcard,
+.ficha-tecnica .tech-grid,
+.tech-table-wrap,
+details p,
+.highlight,
+.ml-summary {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.highlight,
+.ml-summary {
+  border-left: 0 !important;
+}
+
 .contact-blocks {
   display: grid;
   gap: 16px;
@@ -659,9 +684,13 @@ a {
   background: #f9fafb;
 }
 .social-links img {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+.social-links.icon-only a {
+  width: 36px;
+  height: 36px;
 }
 
 .ficha-tecnica .tech-grid {
@@ -685,6 +714,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
+  align-items: start;
   margin-top: 14px;
 }
 .method-card {
